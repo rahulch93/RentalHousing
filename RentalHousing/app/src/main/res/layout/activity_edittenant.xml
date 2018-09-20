@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/White">
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,7 +23,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/back" />
+                    android:background="@drawable/fullname" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -37,7 +36,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name"
+                    android:text="Tenant Name"
                     android:textColor="@color/White"
                     android:textCursorDrawable="@color/White"
                     android:textSize="20dp" />
@@ -48,16 +47,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:background="@drawable/bg1"
+        android:background="@drawable/singleroom"
         android:orientation="vertical"
-        android:weightSum="2">
-
+        android:weightSum="3">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1.5"
+            android:layout_weight="1"></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/upperrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="#66ffffff">
 
             <RelativeLayout
@@ -70,7 +74,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="What's Your Tenant's Name?"
+                    android:text="Enter Details"
                     android:textColor="@color/Black"
                     android:textSize="17dp"
                     android:textStyle="bold" />
@@ -83,8 +87,7 @@
                 android:layout_marginTop="40dp">
 
                 <LinearLayout
-
-                    android:id="@+id/fullnamelinear"
+                    android:id="@+id/house_roomno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -96,17 +99,46 @@
                         android:layout_weight="1">
 
 
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/house_roomno"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+
                         <EditText
-                            android:id="@+id/firstName"
+                            android:id="@+id/roomrent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="10dp"
                             android:backgroundTint="@color/Black"
+                            android:ems="10"
+                            android:hint="Room Rent"
                             android:scrollHorizontally="true"
                             android:singleLine="true"
-                            android:ems="10"
-                            android:hint="First Name"
                             android:textColor="@color/Black"
                             android:textColorHint="@color/Black" />
 
@@ -118,33 +150,34 @@
                         android:layout_weight="1">
 
                         <EditText
-                            android:id="@+id/lastName"
+                            android:id="@+id/priceperunit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="15dp"
                             android:backgroundTint="@color/Black"
                             android:ems="10"
+                            android:hint="Price per Unit"
                             android:scrollHorizontally="true"
                             android:singleLine="true"
-                            android:hint="Last Name"
                             android:textColor="@color/Black"
                             android:textColorHint="@color/Black" />
 
                     </RelativeLayout>
 
+
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/next"
+                    android:id="@+id/addtenant"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/fullnamelinear"
+                    android:layout_below="@id/price"
                     android:layout_marginLeft="12dp"
                     android:layout_marginRight="12dp"
                     android:layout_marginTop="25dp"
                     android:background="@drawable/shape"
-                    android:text="Next"
+                    android:text="EDIT TENANT'S DATA"
                     android:textColor="@color/White" />
             </RelativeLayout>
         </RelativeLayout>
@@ -152,9 +185,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:background="#66ffffff"></RelativeLayout>
+            android:layout_weight="1"
+            ></RelativeLayout>
     </LinearLayout>
 
-
 </RelativeLayout>
+

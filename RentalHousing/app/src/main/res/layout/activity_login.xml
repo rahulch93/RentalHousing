@@ -27,9 +27,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
 
-            android:layout_weight="4.5"
-            >
-
+            android:layout_weight="4.5">
 
 
             <LinearLayout
@@ -58,6 +56,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
                             android:background="@drawable/email" />
                     </RelativeLayout>
 
@@ -71,16 +70,17 @@
                             android:id="@+id/txt_email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:background="@null"
-
                             android:hint="Email"
                             android:maxLines="1"
+                            android:paddingLeft="5dp"
                             android:paddingTop="10dp"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
                             android:textColor="#B1BCBE"
                             android:textColorHint="#B1BCBE"
-                            android:textSize="20dp"
-                            android:scrollHorizontally="true"
-                            android:singleLine="true"/>
+                            android:textSize="20dp" />
                     </RelativeLayout>
 
 
@@ -105,6 +105,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
                             android:background="@drawable/password" />
                     </RelativeLayout>
 
@@ -114,21 +115,39 @@
                         android:layout_toRightOf="@+id/rl_passimg"
                         android:paddingTop="2dp">
 
+                        <RelativeLayout
+                            android:id="@+id/rl_showpassimg"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/showimgicon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/invisible" />
+                        </RelativeLayout>
+
                         <EditText
                             android:id="@+id/pass"
+                            android:layout_toLeftOf="@+id/rl_showpassimg"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
                             android:background="@null"
-
                             android:hint="Password"
-                            android:inputType="textEmailAddress"
                             android:maxLines="1"
-                            android:padding="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="10dp"
+                            android:inputType="textPassword"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
                             android:textColor="#B1BCBE"
                             android:textColorHint="#B1BCBE"
-                            android:textSize="20dp"
-                            android:scrollHorizontally="true"
-                            android:singleLine="true"/>
+                            android:textSize="20dp" />
+
                     </RelativeLayout>
 
 
@@ -145,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="50dp"
                         android:background="@drawable/shape"
                         android:text="Sign In"
                         android:textColor="@color/White" />
@@ -159,13 +178,13 @@
 
                         <TextView
 
+                            android:id="@+id/cna"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:text="Create new account"
                             android:textColor="#ffffff"
-                            android:textSize="15dp"
-                            android:id="@+id/cna"/>
+                            android:textSize="15dp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -177,13 +196,13 @@
 
                         <TextView
 
+                            android:id="@+id/fp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:text="Forgot Password?"
                             android:textColor="#ffffff"
-                            android:textSize="15dp"
-                            android:id="@+id/fp"/>
+                            android:textSize="15dp" />
                     </RelativeLayout>
 
 
